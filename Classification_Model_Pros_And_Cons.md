@@ -20,6 +20,8 @@ Classification Model Pros and Cons (Generalized)
 		* Cons
 			* prone to overfitting
 			* possible issues with diagonal decision boundaries
+			* can change a lot due to just adding couple of new points (so very sensitive to noise!)  
+			
 	* Bagged Trees : train multiple trees using bootstrapped data
 		to reduce variance and prevent overfitting 
 		* Pros
@@ -31,7 +33,8 @@ Classification Model Pros and Cons (Generalized)
 			* Out of bag (OOB) estimates can be used for model validation
 		* Cons
 			* Not as easy to visually interpret
-			* Does not reduce variance if the features are correlated
+			* Does not reduce variance if the features are correlated  
+
 	* Boosted Trees : Similar to bagging, but learns sequentially and builds off
 		previous trees
 		* Pros
