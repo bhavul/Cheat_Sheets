@@ -38,7 +38,7 @@ Classification Model Pros and Cons (Generalized)
 			
 	* Random Forest (improvement over bagging - only choose split from randomly selected subset of all features)
 		* Pros
-			* Decorrelates trees (relative to boosted trees)
+			* Decorrelates trees (relative to bagging trees)
 				* important when dealing with mulitple features which may be correlated
 			* reduced variance (relative to regular trees)
 			* Can form complex decision boundaries (unlike regular decision tree)
@@ -50,12 +50,13 @@ Classification Model Pros and Cons (Generalized)
 	* Boosted Trees : Similar to bagging, but learns sequentially and builds off
 		previous trees
 		* Pros
-			* Somewhat more interpretable than boosted trees/random forest
+			* Somewhat more interpretable than bagging trees/random forest
 				as the user can define the size of each tree resulting in 
 				a collection of stumps (1 level) which can be viewed as an additive model
 			* Can easily handle qualitative (categorical) features
+			* Performs very well on the training data
 		* Cons
-			* Unlike boosting and random forests, can overfit if number of trees is too large
+			* Unlike bagging and random forests, can overfit if number of trees is too large
 
 * SVM
 	* Pros
