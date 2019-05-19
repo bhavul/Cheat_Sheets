@@ -8,6 +8,8 @@ Classification Model Pros and Cons (Generalized)
 		* NOTE: logistic regression can also be used with kernel methods
 	* Cons
 		* high bias
+		* Categorical data needs to be changed to binary / ordinal
+
 * Decision Trees
 	* Regular (not bagged or boosted)
 		* Pros
@@ -39,6 +41,7 @@ Classification Model Pros and Cons (Generalized)
 			* Can easily handle qualitative (categorical) features
 		* Cons
 			* Unlike boosting and random forests, can overfit if number of trees is too large
+
 * Random Forest
 	* Pros
 		* Decorrelates trees (relative to boosted trees)
@@ -46,6 +49,7 @@ Classification Model Pros and Cons (Generalized)
 		* reduced variance (relative to regular trees)
 	* Cons
 		* Not as easy to visually interpret
+
 * SVM
 	* Pros
 		* Performs similarly to logistic regression when linear separation
@@ -53,13 +57,19 @@ Classification Model Pros and Cons (Generalized)
 		* Handle high dimensional data well
 	* Cons
 		* Susceptible to overfitting/training issues depending on kernel
+		* Categorical data needs to be changed to one hot or binary or ordinal
+
+
 * Neural Network (This section needs further information based on 
 	different types of NN's)
+
+
 * Naive Bayes
 	* Pros
 		* Computationally fast
 		* Simple to implement
 		* Works well with high dimensions
+		* Handles categorical data easily
 	* Cons
 		* Relies on independence assumption and will perform 
 			badly if this assumption is not met
