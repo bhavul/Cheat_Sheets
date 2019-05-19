@@ -19,7 +19,7 @@ Classification Model Pros and Cons (Generalized)
 			* Works well with decision boundaries parellel to the feature axis
 		* Cons
 			* prone to overfitting
-			* possible issues with diagonal decision boundaries
+			* possible issues with diagonal decision boundaries or complex decision boundaries
 			* can change a lot due to just adding couple of new points (so very sensitive to noise!)  
 			
 	* Bagged Trees : train multiple trees using bootstrapped data
@@ -31,9 +31,21 @@ Classification Model Pros and Cons (Generalized)
 				* regression: RSS
 			* Can easily handle qualitative (categorical) features
 			* Out of bag (OOB) estimates can be used for model validation
+			* Can form complex decision boundaries (unlike regular decision tree)
 		* Cons
 			* Not as easy to visually interpret
-			* Does not reduce variance if the features are correlated  
+			* Does not reduce variance if the features are correlated    
+			
+	* Random Forest (improvement over bagging - only choose split from randomly selected subset of all features)
+		* Pros
+			* Decorrelates trees (relative to boosted trees)
+				* important when dealing with mulitple features which may be correlated
+			* reduced variance (relative to regular trees)
+			* Can form complex decision boundaries (unlike regular decision tree)
+			* almost all pros of bagged trees apply here.
+		* Cons
+			* Not as easy to visually interpret
+
 
 	* Boosted Trees : Similar to bagging, but learns sequentially and builds off
 		previous trees
@@ -44,14 +56,6 @@ Classification Model Pros and Cons (Generalized)
 			* Can easily handle qualitative (categorical) features
 		* Cons
 			* Unlike boosting and random forests, can overfit if number of trees is too large
-
-* Random Forest
-	* Pros
-		* Decorrelates trees (relative to boosted trees)
-			* important when dealing with mulitple features which may be correlated
-		* reduced variance (relative to regular trees)
-	* Cons
-		* Not as easy to visually interpret
 
 * SVM
 	* Pros
