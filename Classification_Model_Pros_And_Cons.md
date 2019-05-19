@@ -48,7 +48,7 @@ Classification Model Pros and Cons (Generalized)
 
 
 	* Boosted Trees : Similar to bagging, but learns sequentially and builds off
-		previous trees
+		previous trees - trying to minimize error previous ones had
 		* Pros
 			* Somewhat more interpretable than bagging trees/random forest
 				as the user can define the size of each tree resulting in 
@@ -57,6 +57,7 @@ Classification Model Pros and Cons (Generalized)
 			* Performs very well on the training data
 		* Cons
 			* Unlike bagging and random forests, can overfit if number of trees is too large
+			* Slower than bagging / Random forest since trees are made sequentially and they're not independent
 
 * SVM
 	* Pros
